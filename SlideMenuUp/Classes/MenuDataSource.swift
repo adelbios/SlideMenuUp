@@ -7,9 +7,14 @@
 
 import Foundation
 
-struct MenuDataSource  {
+public struct MenuDataSource  {
     
     var title : String?
     var image : UIImage?
+    
+    public init(title : String?,image : UIImage?){
+        self.title = title
+        self.image = image
+    }
     
 }

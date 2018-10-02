@@ -1,14 +1,17 @@
-class MenuViewController : NSObject {
-    var menuItem : [MenuDataSource] = [MenuDataSource]()
+
+public class MenuViewController : NSObject {
+    
+    
+  public  var menuItem : [MenuDataSource] = [MenuDataSource]()
     
     public var tableViewRowHeight : CGFloat = 50
     public var headerTitle        : String?
     
-    private var tableViewHeight  : CGFloat {
+    fileprivate var tableViewHeight  : CGFloat {
         return CGFloat(self.menuItem.count) * self.tableViewRowHeight + self.headerTitleHeight
     }
     
-    private var headerTitleHeight: CGFloat {
+    fileprivate var headerTitleHeight: CGFloat {
         if self.headerTitle == nil {
             return 0.0
         }else{
@@ -16,7 +19,7 @@ class MenuViewController : NSObject {
         }
     }
     
-    private lazy var headerTitleLabel : UILabel = {
+    fileprivate lazy var headerTitleLabel : UILabel = {
         let label = UILabel()
         label.font          = self.headerTextFont
         label.textColor     = self.headerTextColor
@@ -25,7 +28,7 @@ class MenuViewController : NSObject {
         return label
     }()
     
-    private let blackView : UIView = {
+    fileprivate let blackView : UIView = {
         let v = UIView()
         v.alpha = 0
         v.backgroundColor = UIColor.black.withAlphaComponent(0.5)
@@ -33,20 +36,20 @@ class MenuViewController : NSObject {
     }()
     
     
-    private var tableViewHeightAncor  : NSLayoutConstraint?
-    private var tableViewBottomtAncor : NSLayoutConstraint?
-    private var fakeViewHeightAncor   : NSLayoutConstraint?
+    fileprivate var tableViewHeightAncor  : NSLayoutConstraint?
+    fileprivate var tableViewBottomtAncor : NSLayoutConstraint?
+    fileprivate var fakeViewHeightAncor   : NSLayoutConstraint?
     
     
     
-    private let fakeView : UIView  = {
+    fileprivate let fakeView : UIView  = {
         let v = UIView()
         v.backgroundColor = UIColor.white
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
     
-    private lazy var tableView: UITableView = {
+    fileprivate lazy var tableView: UITableView = {
         let t = UITableView(frame: .zero, style: .plain)
         t.backgroundColor = .white
         t.dataSource      = self
@@ -73,7 +76,7 @@ class MenuViewController : NSObject {
         
     }
     
-    private func animate(){
+    fileprivate func animate(){
         
         guard let window = UIApplication.shared.keyWindow else { return }
         self.tableViewHeightAncor?.constant = self.tableViewHeight
@@ -108,7 +111,7 @@ class MenuViewController : NSObject {
     }
     
     
-    override init() {
+    public override init() {
         super.init()
         self.setupUI()
     }
@@ -116,7 +119,7 @@ class MenuViewController : NSObject {
 }
 
 //MARK: - SetupUI
-private extension  MenuViewController {
+fileprivate extension  MenuViewController {
     
     func setupUI(){
         

@@ -7,29 +7,29 @@
 
 import UIKit
 
-class MenuCell : UITableViewCell {
+public class MenuCell : UITableViewCell {
     
-    var menuTextFont  : UIFont  {
+   public var menuTextFont  : UIFont  {
         get { return UIFont.systemFont(ofSize: 15) }
         set{ self.menuTitle.font = newValue }
     }
-    var menuTextColor : UIColor {
+   public var menuTextColor : UIColor {
         get { return .black }
         set { self.menuTitle.textColor = newValue }
     }
-    var iconColor     : UIColor {
+   public var iconColor     : UIColor {
         get { return .black }
         set { self.menuIcon.tintColor = newValue }
     }
     
-    lazy var menuIcon : UIImageView = {
+  private  lazy var menuIcon : UIImageView = {
         let i = UIImageView()
         i.tintColor = self.iconColor
         i.translatesAutoresizingMaskIntoConstraints = false
         return i
     }()
     
-    lazy var menuTitle : UILabel = {
+   private lazy var menuTitle : UILabel = {
         let l = UILabel()
         l.font = self.menuTextFont
         l.textColor = self.menuTextColor
@@ -46,9 +46,8 @@ class MenuCell : UITableViewCell {
         }
     }
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         addSubview(self.menuIcon)
         addSubview(self.menuTitle)
         
@@ -64,8 +63,9 @@ class MenuCell : UITableViewCell {
             self.menuTitle.heightAnchor.constraint(equalToConstant: 25),
             
             ])
-        
     }
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
