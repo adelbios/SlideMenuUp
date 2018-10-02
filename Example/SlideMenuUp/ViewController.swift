@@ -7,18 +7,31 @@
 //
 
 import UIKit
+import SlideMenuUp
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationItem.title = "Slide-Menu-Out"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showSlideOutMenu))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc private func showSlideOutMenu(){
+        let menuVC = MenuViewController()
+        menuVC.headerTitle = "Select from A menu"
+        
+        menuVC.didSelectItemWith = { index in
+            print(index)
+        }
+        menuVC.menuItem = [MenuDataSource(title:"Account",image:#imageLiteral(resourceName: "account")),
+                           MenuDataSource(title:"Report",image:#imageLiteral(resourceName: "report")),
+                           MenuDataSource(title:"Setting",image:#imageLiteral(resourceName: "setting")),
+                           MenuDataSource(title:"Close",image:#imageLiteral(resourceName: "close"))]
+        menuVC.show()
+        
     }
+  
 
 }
 
