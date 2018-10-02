@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		1BAC30B58B84AEC30EEAE331 /* Pods-SlideMenuUp_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuUp_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideMenuUp_Example/Pods-SlideMenuUp_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		37F97EBB203F7465A2E83DD3 /* Pods_SlideMenuUp_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuUp_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47A43B9E53325A088BF2B808 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		47A43B9E53325A088BF2B808 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SlideMenuUp_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideMenuUp_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,10 +43,10 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		67E430FF5A10F993E9B8A53F /* Pods-SlideMenuUp_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuUp_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideMenuUp_Tests/Pods-SlideMenuUp_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		768F2AD0E171E8536B7A348C /* Pods-SlideMenuUp_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuUp_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideMenuUp_Tests/Pods-SlideMenuUp_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7AFB2D8C84F286E6A650D317 /* SlideMenuUp.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SlideMenuUp.podspec; path = ../SlideMenuUp.podspec; sourceTree = "<group>"; };
+		7AFB2D8C84F286E6A650D317 /* SlideMenuUp.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SlideMenuUp.podspec; path = ../SlideMenuUp.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AD48722EF33F48D74D3C76E7 /* Pods_SlideMenuUp_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuUp_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CA391BEF11520FE6D04B5A /* Pods-SlideMenuUp_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuUp_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideMenuUp_Example/Pods-SlideMenuUp_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DF6104C4A8EEAF99D35EC9ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DF6104C4A8EEAF99D35EC9ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = BPK7UAAQ87;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = BPK7UAAQ87;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -481,7 +483,9 @@
 			baseConfigurationReference = 1BAC30B58B84AEC30EEAE331 /* Pods-SlideMenuUp_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BPK7UAAQ87;
 				INFOPLIST_FILE = SlideMenuUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -496,7 +500,9 @@
 			baseConfigurationReference = B5CA391BEF11520FE6D04B5A /* Pods-SlideMenuUp_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BPK7UAAQ87;
 				INFOPLIST_FILE = SlideMenuUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 768F2AD0E171E8536B7A348C /* Pods-SlideMenuUp_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = BPK7UAAQ87;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -532,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 67E430FF5A10F993E9B8A53F /* Pods-SlideMenuUp_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = BPK7UAAQ87;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

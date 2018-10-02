@@ -8,8 +8,34 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```swift
+let menuVC = MenuViewController()
+menuVC.headerTitle = "Select from A menu"
 
-## Requirements
+menuVC.menuItem = [
+MenuDataSource(title:"Account",image: UIImage()),
+MenuDataSource(title:"Report",image:UIImage()),
+MenuDataSource(title:"Setting",image:UIImage()),
+MenuDataSource(title:"Close",image:UIImage())]
+
+menuVC.didSelectItemWith = { index in
+print(index)
+}
+
+menuVC.show()
+```
+## CUSTOMIZE STYLE
+```swift
+let menuVC = MenuViewController()
+menuVC.tableViewRowHeight  = 50
+menuVC.headerTextAlignment = .center
+menuVC.headerTextColor     = .red
+menuVC.headerTextFont      = .systemFont(ofSize: 15)
+menuVC.menuItemTextFont    = .systemFont(ofSize: 15)
+menuVC.menuItemTextColor   = .orange
+menuVC.menuIconColor       = .red
+```
+
 
 ## Installation
 
@@ -22,7 +48,7 @@ pod 'SlideMenuUp'
 
 ## Author
 
-MEIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECKmNZ8DdASA6BBjbzvQl7td8tMu/dmaBLwm1VFqNmWIIVHE=, adelbios11@gmail.com
+Adel Radwan, adelbios11@gmail.com
 
 ## License
 
