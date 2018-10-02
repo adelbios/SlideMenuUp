@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SlideMenuUp_Example' do
+  pod 'SlideMenuUp', :path => '../'
+
+  target 'SlideMenuUp_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
